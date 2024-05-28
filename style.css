@@ -1,0 +1,222 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.chatbot-container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+#chatbot {
+    background-color: #f5f5f5;
+    border: 1px solid #eef1f5;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  #header {
+    background-color: darkslategrey;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  message-container {
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  #conversation {
+    height: 500px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes message-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .chatbot-message {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .user-message {
+    justify-content: flex-end;
+  }
+
+
+.chatbot-text {
+    background-color: white;
+    color: #333333;
+    font-size: 1.1em;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #input-form {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eef1f5;
+  }
+  
+  #input-field {
+    flex: 1;
+    height: 60px;
+    border: 1px solid #eef1f5;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background: #ffffff;
+    color: #333333;
+    border: none;
+  }
+
+  .send-icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  #input-field:focus {
+    border-color: #333333;
+    outline: none;
+  }
+  
+  #submit-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  p[sentTime]:hover::after {    
+    content: attr(sentTime);
+    position: absolute;
+    top: -3px;
+    font-size: 14px;
+    color: gray;
+  }
+
+  .chatbot p[sentTime]:hover::after {  
+    left: 15px;
+  }
+
+  .user-message p[sentTime]:hover::after {  
+    right: 15px;
+  }
+  
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .faq-button, .lang-button {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.faq-button:hover, .lang-button:hover {
+    background-color: #f1f1f1;
+}
+
+#social-icons {
+  position: fixed; /* Фиксированная позиция */
+  top: 50%; /* Располагаем верхний край по вертикали на 50% от верха окна */
+  left: 0; /* Располагаем левый край в самом левом углу окна */
+  transform: translateY(-50%); /* Смещаем блок на половину его высоты вверх, чтобы он оказался ровно по центру вертикально */
+  z-index: 9999; /* Устанавливаем z-index, чтобы блок находился поверх остальных элементов */
+  background-color: rgba(255, 255, 255, 0.8); /* Цвет фона с прозрачностью */
+  padding: 10px; /* Внутренний отступ */
+}
+.logo-img {
+  width: 30px; /* Устанавливаем ширину логотипов */
+  height: auto; /* Автоматический расчет высоты, чтобы сохранить пропорции */
+  margin-right: 10px; /* Добавляем немного отступа между логотипами */
+}
+.logo-img2 {
+  width: 60px; /* Устанавливаем ширину логотипов */
+  height: auto; /* Автоматический расчет высоты, чтобы сохранить пропорции */
+  margin-right: 10px; /* Добавляем немного отступа между логотипами */
+}
+
+#social-icons a {
+  display: inline-block; /* Делаем ссылки блочными элементами */
+  margin-right: 10px;
+  /* Отступ между иконками */
+}
+
+#social-icons span {
+  display: block; /* Делаем текстовый блок блочным элементом */
+  margin-top: 10px; /* Отступ сверху */
+  font-size: 14px; /* Размер шрифта */
+}
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Полное заполнение высоты экрана */
+  overflow: hidden;
+}
+
+.mySlides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: fade 50s infinite; /* Запускаем анимацию смены слайдов */
+  animation-timing-function: ease-in-out; /* Изменяем функцию анимации */
+}
+
+@keyframes fade {
+  0% { opacity: 0; } /* Начальная прозрачность */
+  33.333% { opacity: 1; } /* Первый слайд */
+  66.666% { opacity: 1; } /* Второй слайд */
+  100% { opacity: 0; } /* Конечная прозрачность */
+}
