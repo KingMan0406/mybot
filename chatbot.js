@@ -66,28 +66,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-    displayMessage("Привет! Какой язык вы предпочитаете?");
+    displayMessage("Здравствуйте! Какой язык вы предпочитаете?");
     displayLanguageOptions();
 });
 
-// Получаем все слайды
-var slides = document.querySelectorAll('.mySlides');
-var currentSlide = 0;
 
-// Показываем первый слайд
-showSlide(currentSlide);
 
-// Функция для показа слайда
-function showSlide(n) {
-    // Скрываем все слайды
-    slides.forEach(function(slide) {
-        slide.style.opacity = "0";
-    });
-    // Показываем текущий слайд
-    slides[n].style.opacity = "1";
-    // Переключаемся на следующий слайд
-    currentSlide = (n + 1) % slides.length;
-    // Запускаем функцию снова через 10 секунд
-    setTimeout(function() { showSlide(currentSlide); }, 5000); // 10000 миллисекунд = 10 секунд
-}
 
